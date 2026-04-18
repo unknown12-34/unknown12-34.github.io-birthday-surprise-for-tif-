@@ -2,78 +2,146 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Surprise</title>
+  <title>HAPPY BIRTHDAY TIFF</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
       color: white;
 
-      background-color: pink; /* fallback base */
-  
-      background: linear-gradient(
-           rgba(255, 192, 203, 0.3),  /* pink overlay */
-          rgba(255, 192, 203, 0.3)
-           ),
-           url("aceflux-flag-light pink-color.png") no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url("aceflux-flag-light pink-color.png") no-repeat center center/cover;
 
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .gallery {
-      display: flex;
-      gap: 20px;              /* space between images */
-      flex-wrap: wrap;        /* allows stacking on phone */
-      justify-content: center;
-    }
-
-    .gallery img {
-      width: 150px;           /* control size here */
-      height: auto;
-      border-radius: 15px;
-      object-fit: cover;
-    }
-    .content {
+      min-height: 100vh;
+      text-align: center;
       padding: 20px;
+      overflow-x: hidden;
     }
 
     h1 {
-      font-size: 8vw;
-      margin: 0;
+      font-size: 6vw;
+      margin-top: 20px;
     }
 
-    p {
-      font-size: 4vw;
+    .btn {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: white;
+      color: black;
+      margin-top: 30px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: none;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+
+      /* fade-in setup */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .gallery.show {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery img {
+      width: 150px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.9;
     }
 
     @media (min-width: 768px) {
-      h1 {
-        font-size: 50px;
-      }
-      p {
-        font-size: 20px;
+      h1 { font-size: 40px; }
+    }
+
+    /* CONFETTI */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: red;
+      top: -10px;
+      animation: fall 3s linear forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="content">
-    <h1>🎉 Happy Birthday 🎂</h1>
-    <p>Hope you like this gift for your birthday even though its not a happy month but today is a happy day!! 💖</p>
-  </div>  
-  <div class="gallery">
+
+  <h1>🎉 Our Memories 🎂</h1>
+
+  <button class="btn" onclick="showMemories()">
+    Open the Memory
+  </button>
+
+  <div class="gallery" id="gallery">
+    <img src="1.jpeg">
     <img src="2.jpeg">
     <img src="otter_birthday2.jpg">
-    <img src="1.jpeg">
+    <img src="img4.jpg">
   </div>
-</body>
 
-<end>
-  lop you :>
-</end>
-  </html>
+  <div class="footer">
+    <p>Thanks for all the memories we shared 💖</p>
+  </div>
+
+  <script>
+    function showMemories() {
+      // show gallery with fade-in
+      const gallery = document.getElementById("gallery");
+      gallery.classList.add("show");
+
+      // trigger confetti
+      createConfetti();
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 40; i++) {
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.background = randomColor();
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 3000);
+      }
+    }
+
+    function randomColor() {
+      const colors = ["#ff4d6d", "#ffd166", "#06d6a0", "#4cc9f0", "#f72585"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+
+</body>
+</html>
