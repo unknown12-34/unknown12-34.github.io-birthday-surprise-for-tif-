@@ -7,27 +7,31 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial;
-      background: url("otter_birthday.jpg") center/cover no-repeat;
-      background-size: cover;      /* fills entire screen */
-      background-repeat: no-repeat;
-      background-position: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+
+      /* Background image */
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url("background.jpg") no-repeat center center/cover;
+
       height: 100vh;
-      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      padding: 20px;
     }
 
     h1 {
-      font-size: 8vw; /* responsive text */
+      font-size: 8vw;
+      margin: 0;
     }
 
     p {
       font-size: 4vw;
-    }
-
-    .box {
-      width: 90%;
-      max-width: 500px;
-      margin: auto;
     }
 
     @media (min-width: 768px) {
@@ -42,10 +46,9 @@
 </head>
 
 <body>
-  <div class="box">
+  <div class="content">
     <h1>🎉 Happy Birthday 🎂</h1>
-    <p>You mean a lot to me 💖</p>
-    <img src="otter_birthday.jpg">
+    <p>You are amazing! 💖</p>
   </div>
 </body>
 </html>
