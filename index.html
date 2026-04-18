@@ -24,7 +24,19 @@
     justify-content: center;
     align-items: center;
     }
+    .gallery {
+      display: flex;
+      gap: 20px;              /* space between images */
+      flex-wrap: wrap;        /* allows stacking on phone */
+      justify-content: center;
+    }
 
+    .gallery img {
+      width: 150px;           /* control size here */
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
     .content {
       padding: 20px;
     }
@@ -53,9 +65,15 @@
   <div class="content">
     <h1>🎉 Happy Birthday 🎂</h1>
     <p>Hope you like this gift for your birthday even though its not a happy month but today is a happy day!! 💖</p>
+  </div>  
+  <div class="gallery">
+    <img src="2.jpeg">
+    <img src="otter_birthday2.jpg">
+    <img src="1.jpeg">
   </div>
 </body>
 
 <end>
   lop you :>
-</html>
+</end>
+  </html>
