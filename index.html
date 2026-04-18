@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birthday!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+<style>
+  body {
+    background-image: url("otter_birthday.jpg"); /* your image file */
+    background-size: cover;      /* fills entire screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  }
+</style>
   <style>
     body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: Arial;
       text-align: center;
       color: white;
-      padding-top: 100px;
+      background: url("background.jpg") center/cover no-repeat;
     }
+
     h1 {
-      font-size: 50px;
+      font-size: 8vw; /* responsive text */
     }
+
     p {
-      font-size: 20px;
+      font-size: 4vw;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+
+    .box {
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>🎉 Happy Birthday! 🎂</h1>
-  <p>Click the button for a surprise 👇</p>
-
-  <button onclick="showMessage()">Click Me</button>
-
-  <p id="hiddenMessage" style="display:none; margin-top:20px;">
-    You're the best friend ever! 💖
-  </p>
-
-  <script>
-    function showMessage() {
-      document.getElementById("hiddenMessage").style.display = "block";
-    }
-  </script>
+  <div class="box">
+    <h1>🎉 Happy Birthday 🎂</h1>
+    <p>You mean a lot to me 💖</p>
+    <img src="photo.jpg">
+  </div>
 </body>
 </html>
