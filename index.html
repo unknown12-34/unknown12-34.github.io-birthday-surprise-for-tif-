@@ -193,6 +193,17 @@
       return colors[Math.floor(Math.random() * colors.length)];
     }
   </script>
+<script>
+window.addEventListener("load", function () {
+  fetch("https://api.countapi.xyz/hit/tif-birthday-site-2026/visits")
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById("counter");
+      if (el) el.innerText = data.value;
+    })
+    .catch(err => console.log("Counter error:", err));
+});
+</script>
 <p id="counterBox" style="display:none;">👀 Visitors: <span id="counter">0</span></p>
   <script>
 const secret = "1234";
