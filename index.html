@@ -193,6 +193,13 @@
       return colors[Math.floor(Math.random() * colors.length)];
     }
   </script>
+<p id="counterBox" style="display:none;">👀 Visitors: <span id="counter">0</span></p>
+  <script>
+const secret = "1234";
 
+if (location.hash === "#admin1234") {
+  document.getElementById("counterBox").style.display = "block";
+}
+</script>
 </body>
 </html>
