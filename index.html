@@ -99,10 +99,12 @@
   <h1>🎉 HAPPY BIRTHDAY TIF !!🎂</h1>
   <div id="main">
   <div class="footer">
-    <p style="font-size:12px">
+    <p style="font-size: 30px">
     <p>Today is your great day! 💖</p>
-    <p>Be ready to read this long long message/p>
+    <p>Be ready to read this long long message </p>
   </div>
+
+    
 <h2 id="typing"></h2>
               <script>
                 const text = `🎉 Happy Birthday 🎂,
@@ -114,7 +116,7 @@
                 `;
 
   let i = 0;
-  const speed =  100; // typing speed (lower = faster)
+  const speed =  20; // typing speed (lower = faster)
 
   function typeEffect() {
     if (i < text.length) {
@@ -149,7 +151,7 @@
   animation: fadeIn 1.5s ease forwards;
   animation-delay: 1800s;
 }
-    .fade4 {
+    .fade5 {
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
   animation-delay: 30s;
@@ -164,7 +166,8 @@
 <p class="fade1"> And don’t always think about others only—remember to think about yourself too 😊</p>
 <p class="fade1"> DRINK more water, if too cold at night make your aircon warmer first hahaah then adjust it back when you going to sleep,BYE BYE TO SICKNESS</p>
 <p class="fade1"> Hope you like the gift, cause its abit too simple :< </p>
-    <p class="fade5"> Ouh and Hi to everyone who ever saw this</p>
+    <p class="fade4"> Ouh and Hi to everyone who ever saw this </p>
+    <p class="fade5">                                                                - by BJJ</p>
     <p class="fade2"> because you are important.............. </p>
 <p class="fade3"> I know its not now.... but I love you...</p>
 
@@ -222,5 +225,16 @@
 <p style="font-size:10px; opacity:0.2;">
   <img src="https://hitwebcounter.com/counter/counter.php?page=987654321&style=0006&nbdigits=5&type=page&initCount=0">
 </p>
+<p>Visitors: <span id="counter">Loading...</span></p>
 
+<script>
+fetch('https://api.countapi.xyz/hit/https://unknown12-34.github.io/unknown12-34.github.io-birthday-surprise-for-tif-//visits')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('counter').innerText = data.value;
+  })
+  .catch(() => {
+    document.getElementById('counter').innerText = "Unavailable";
+  });
+</script>
 </html>
