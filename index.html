@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html>  
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAPPY BIRTHDAY TIFF</title>
+  <title>Happy Birthday Tif</title>
 
   <style>
-    p {
-  font-size: 25px;
-}
+    /* ===== GLOBAL STYLING ===== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: grey;
-
-      background: linear-gradient(rgba(255,192,203,0.3), rgba(255,192,203,0.3)),
-                  url("aceflux-flag-light pink-color.png") no-repeat center center/cover;
-
-      min-height: 100vh;
       text-align: center;
       padding: 20px;
       overflow-x: hidden;
+
+      /* Background with overlay */
+      background: linear-gradient(rgba(255,192,203,0.3), rgba(255,192,203,0.3)),
+                  url("aceflux-flag-light pink-color.png") no-repeat center/cover;
     }
 
+    /* Main heading */
     h1 {
       font-size: 6vw;
       margin-top: 20px;
     }
 
+    /* Paragraph default size */
+    p {
+      font-size: 20px;
+    }
+
+    /* Button styling */
     .btn {
       padding: 12px 25px;
       font-size: 18px;
@@ -34,24 +40,24 @@
       border-radius: 12px;
       cursor: pointer;
       background: white;
-      color: black;
       margin-top: 30px;
     }
 
-    /* GALLERY */
+    /* ===== GALLERY (hidden first) ===== */
     .gallery {
       display: none;
-      margin-top: 30px;
       flex-wrap: wrap;
-      gap: 15px;
       justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
 
-      /* fade-in setup */
+      /* animation setup */
       opacity: 0;
       transform: translateY(20px);
-      transition: all 1s ease;
+      transition: 1s ease;
     }
 
+    /* When activated */
     .gallery.show {
       display: flex;
       opacity: 1;
@@ -61,201 +67,15 @@
     .gallery img {
       width: 150px;
       border-radius: 12px;
-      object-fit: cover;
     }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.9;
+    /* ===== FADE TEXT EFFECT ===== */
+    .fade {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
     }
 
-    @media (min-width: 768px) {
-      h1 { font-size: 40px; }
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
-
-    /* CONFETTI */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: red;
-      top: -10px;
-      animation: fall 3s linear forwards;
-      z-index: 9999;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <h1>🎉 HAPPY BIRTHDAY TIF !!🎂</h1>
-  <div id="main">
-  <div class="footer">
-    <p style="font-size: 30px">
-    <p>Today is your great day! 💖</p>
-    <p>Be ready to read this long long message </p>
-  </div>
-
-    <button class="btn" onclick="showwords()">
-    Tap Me
-  </button>
-    
-  
-   
-  </div>
-  <script>
-    function showwords() {
-      // show gallery with fade-in      
-              <script id="typing">
-                const text = `🎉 Happy Birthday 🎂,
-                hope you can get into UM and become a professional doctor in the future!!
-                Have the chance to travel all around the world, especially to Japan, to enjoy the cherry blossoms 🌸
-                Buy lots of strawberries and chocolate 🍓🍫
-                And pet a super, super cute otter 🦦
-                Hope you have a great day today ❤️ NO STRESS YAAA!!!
-                `;
-
-  let i = 0;
-  const speed =  40; // typing speed (lower = faster)
-
-  function typeEffect() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i)
-        .replace(/\n/g, "<br>"); // keeps line breaks
-      i++;
-      setTimeout(typeEffect, speed);
-    }
-  }
-
-  typeEffect();
-</script>
-      
-<h2 id="typing">      
-              <script>
-                const text = `🎉 Happy Birthday 🎂,
-                hope you can get into UM and become a professional doctor in the future!!
-                Have the chance to travel all around the world, especially to Japan, to enjoy the cherry blossoms 🌸
-                Buy lots of strawberries and chocolate 🍓🍫
-                And pet a super, super cute otter 🦦
-                Hope you have a great day today ❤️ NO STRESS YAAA!!!
-                `;
-
-  let i = 0;
-  const speed =  40; // typing speed (lower = faster)
-
-  function typeEffect() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i)
-        .replace(/\n/g, "<br>"); // keeps line breaks
-      i++;
-      setTimeout(typeEffect, speed);
-    }
-  }
-
-  typeEffect();
-</script>
-<style>
-.fade1 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 50s;
-}
-  .fade2 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 43150s;
-}
-  .fade3 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 43200s;
-}
-
-    .fade4 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 1800s;
-}
-    .fade5 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease forwards;
-  animation-delay: 65s;
-}
-  
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-</style>
-<p class="fade1"> And don’t always think about others only—remember to think about yourself too 😊</p>
-<p class="fade1"> DRINK more water, if too cold at night make your aircon warmer first hahaah then adjust it back when you going to sleep,BYE BYE TO SICKNESS</p>
-<p class="fade1"> Hope you like the gift, cause its abit too simple :< </p>
-    <p class="fade4"> Ouh and Hi to everyone who ever saw this </p>
-    <p class="fade5">                                                                - by BJJ</p>
-    <p class="fade2"> because you are important.............. </p>
-<p class="fade3"> I know its not now.... but I love you...</p>
-
-
-
-  
-    <button class="btn" onclick="showMemories()">
-    Tap Me
-  </button>
-    
-  <div class="gallery" id="gallery">
-    
-    <img src="1.jpeg">
-    <img src="2.jpeg">
-    <img src="otter_birthday.jpg">
-<img src="family.jpeg"><p>: Animal family</p>
-  
-   
-  </div>
-  <script>
-    function showMemories() {
-      // show gallery with fade-in
-      const gallery = document.getElementById("gallery");
-      gallery.classList.add("show");
-
-      // trigger confetti
-      createConfetti();
-    }
-
-    function createConfetti() {
-      for (let i = 0; i < 40; i++) {
-        let confetti = document.createElement("div");
-        confetti.classList.add("confetti");
-
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.background = randomColor();
-        confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
-
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-          confetti.remove();
-        }, 3000);
-      }
-    }
-
-    function randomColor() {
-      const colors = ["#ff4d6d", "#ffd166", "#06d6a0", "#4cc9f0", "#f72585"];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-  </script>
-
-</body>
-
-<p style="font-size:10px; opacity:0.3;">
-  <img src="https://hitwebcounter.com/counter/counter.php?page=987654321&style=0006&nbdigits=5&type=page&initCount=0">
-</p>
 </html>
