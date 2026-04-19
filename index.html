@@ -163,8 +163,7 @@
     <img src="1.jpeg">
     <img src="2.jpeg">
     <img src="otter_birthday.jpg">
-    <p>: Animal family</p>
-<img src="family.jpeg">
+<img src="family.jpeg"><p>: Animal family</p>
   
    
   </div>
@@ -200,17 +199,7 @@
       return colors[Math.floor(Math.random() * colors.length)];
     }
   </script>
-<script>
-fetch("https://api.countapi.xyz/hit/unknown12-34/tifbirthday2026")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visitor-count").innerText = data.value;
-  })
-  .catch(err => {
-    console.log(err);
-    document.getElementById("visitor-count").innerText = "Error";
-  });
-</script>
+
 </body>
 
   <p>👀 Visitors:</p>
