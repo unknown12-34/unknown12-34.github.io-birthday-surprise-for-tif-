@@ -197,34 +197,12 @@
 <p id="counterBox" style="display:none;">👀 Visitors: <span id="counter">0</span></p>
   <script>
 const secret = "1234";
-
-<script>
-let visits = localStorage.getItem("visitCount") || 0;
-visits++;
-localStorage.setItem("visitCount", visits);
-
-// SECRET VIEW
-if (location.hash === "#admin1234") {
-  document.getElementById("counterBox").style.display = "block";
-  document.getElementById("counter").innerText = visits;
-}
-
-// Console check
-window.getVisits = function() {
-  return localStorage.getItem("visitCount");
-};
 </script>
-</script>
+ 
   
- <script>
-let visits = localStorage.getItem("visitCount") || 0;
-visits++;
-localStorage.setItem("visitCount", visits);
+  <p style="font-size:10px; opacity:0.3;">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=987654321&style=0006&nbdigits=5&type=page&initCount=0">
+</p>
 
-// Allow manual check
-window.getVisits = function() {
-  return localStorage.getItem("visitCount");
-};
-</script>
 </body>
 </html>
